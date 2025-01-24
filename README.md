@@ -59,7 +59,7 @@ This project is a **real-time leaderboard system** built using **FastAPI**, **Re
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/fsuarez16/realtime-leaderboard.git
-   cd real-time-leaderboard
+   cd realtime-leaderboard
 2. **Install Dependencies**:
    ```bash
    pip install fastapi uvicorn redis passlib[bcrypt] python-multipart jinja2 python-dotenv sqlalchemy
