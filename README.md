@@ -58,7 +58,7 @@ This project is a **real-time leaderboard system** built using **FastAPI**, **Re
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/real-time-leaderboard.git
+   git clone https://github.com/fsuarez16/realtime-leaderboard.git
    cd real-time-leaderboard
 2. **Install Dependencies**:
    ```bash
