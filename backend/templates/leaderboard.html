@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="text-3xl font-bold mb-4">Leaderboard - {{ game }}</h1>
+<table class="min-w-full bg-white border">
+  <thead>
+    <tr>
+      <th class="py-2 px-4 border-b">Rank</th>
+      <th class="py-2 px-4 border-b">Username</th>
+      <th class="py-2 px-4 border-b">Score</th>
+      <th class="py-2 px-4 border-b">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for rank, entry in enumerate(leaderboard, start=1) %}
+    <tr>
+      <td class="py-2 px-4 border-b">{{ rank }}</td>
+      <td class="py-2 px-4 border-b">{{ entry.username }}</td>
+      <td class="py-2 px-4 border-b">{{ entry.score }}</td>
+      <td class="py-2 px-4 border-b">{{ entry.source }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

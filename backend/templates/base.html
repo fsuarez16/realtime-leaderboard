@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-time Leaderboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="bg-blue-600 p-4 text-white">
+      <div class="container mx-auto">
+        <a href="/" class="text-2xl font-bold">Leaderboard</a>
+        <div class="float-right">
+          <a href="/login" class="mr-4">Login</a>
+          <a href="/register">Register</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto p-4">{% block content %}{% endblock %}</div>
+  </body>
+</html>

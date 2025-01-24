@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="text-3xl font-bold mb-4">Submit Score</h1>
+<form
+  method="post"
+  action="/submit_score"
+  class="bg-white p-6 rounded shadow-md"
+  onsubmit="return validateScore()"
+>
+  <div class="mb-4">
+    <label for="game" class="block text-gray-700">Game</label>
+    <input
+      type="text"
+      id="game"
+      name="game"
+      class="w-full p-2 border rounded"
+      required
+    />
+  </div>
+  <div class="mb-4">
+    <label for="score" class="block text-gray-700">Score</label>
+    <input
+      type="number"
+      id="score"
+      name="score"
+      class="w-full p-2 border rounded"
+      required
+    />
+    <p id="score-warning" class="text-red-500 text-sm mt-1 hidden">
+      Score must be between 0 and 9.
+    </p>
+  </div>
+  <button type="submit" class="bg-blue-600 text-white p-2 rounded">
+    Submit
+  </button>
+</form>
+
+<script>
+  function validateScore() {
+    const scoreInput = document.getElementById("score");
+    const scoreWarning = document.getElementById("score-warning");
+    const score = parseFloat(scoreInput.value);
+
+    if (score < 0 || score > 9) {
+      scoreWarning.classList.remove("hidden");
+      return false; // Prevent form submission
+    } else {
+      scoreWarning.classList.add("hidden");
+      return true; // Allow form submission
+    }
+  }
+</script>
+{% endblock %}
